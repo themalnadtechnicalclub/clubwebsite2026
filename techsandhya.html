@@ -51,62 +51,281 @@
         </div>
     </div>
 
-    <div class="techsandhya">
-        <div class="a-head">
-            <h1>Techsandhya</h1>
-            <hr>
-            <p>Techsandhya is the technical newsletter of the college, published annually by The Malnad technical Club.
-                It started in 2016 with the vision of providing an opportunity for tech-savvy students to put forth
-                their ideas on a technical facet.</p>
+    <div class="techsandhya-page">
+        <div class="header-section">
+            <h1>TECHSANDHYA</h1>
+            <div class="line-divider"></div>
+            <p class="subtitle">The prestigious technical newsletter of Malnad College of Engineering, providing a
+                platform
+                for innovative ideas and research.</p>
         </div>
-        <div class="container">
-            <div class="tech-box">
-                <img src="./images/techsandhya/8th.png" alt="1st techsandhya">
-                <h3>Techsandhya 8.0</h3>
-                <a href="./techsandhya/techsandhya(8.0).pdf"><button class="btn">View here</button></a>
+
+        <!-- Navigation Tabs -->
+        <div class="tabs-container">
+            <div class="tabs">
+                <button class="tab-btn active" onclick="openTab('about')">About</button>
+                <button class="tab-btn" onclick="openTab('submit')">Submit Article</button>
+                <button class="tab-btn" onclick="openTab('guidelines')">Guidelines</button>
             </div>
-            <div class="tech-box">
-                <img src="./images/techsandhya/7th.jpg" alt="1st techsandhya">
-                <h3>Techsandhya 7.0</h3>
-                <a href="./techsandhya/techsandhya(7.0).pdf"><button class="btn">View here</button></a>
+        </div>
+
+        <!-- About Tab Content -->
+        <div id="about" class="tab-content active">
+            <div class="about-grid">
+                <div class="about-text">
+                    <h2>About Techsandhya</h2>
+                    <p>Techsandhya is the prestigious technical newsletter of Malnad College of Engineering, published
+                        annually by The Malnad Technical Club since 2016. It provides a platform for tech-savvy students
+                        to showcase their innovative ideas and research.</p>
+
+                    <div class="features-list">
+                        <div class="feature-item">
+                            <div class="icon-circle"><i class="fa-solid fa-pen-nib"></i></div>
+                            <div>
+                                <h4>Article Submission</h4>
+                                <p>Submit your technical articles and research papers for publication in Techsandhya 8.0
+                                </p>
+                            </div>
+                        </div>
+                        <div class="feature-item">
+                            <div class="icon-circle"><i class="fa-solid fa-users"></i></div>
+                            <div>
+                                <h4>Peer Review</h4>
+                                <p>All submissions undergo rigorous peer review by faculty and industry experts</p>
+                            </div>
+                        </div>
+                        <div class="feature-item">
+                            <div class="icon-circle"><i class="fa-solid fa-trophy"></i></div>
+                            <div>
+                                <h4>Recognition</h4>
+                                <p>Get published in a nationally recognized technical publication</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="action-buttons">
+                        <button class="btn-primary" onclick="openTab('submit')">Submit Article</button>
+                        <button class="btn-outline" onclick="openTab('guidelines')">Download Guidelines</button>
+                    </div>
+                </div>
+                <!-- Check if we have a suitable image, otherwise use a placeholder or one of the event images -->
+                <div class="about-image">
+                    <img src="./images/techsandhya/8th.png" alt="Techsandhya Cover">
+                    <div class="image-overlay"></div>
+                </div>
             </div>
-            <div class="tech-box">
-                <img src="./images/techsandhya/5th.jpg" alt="1st techsandhya">
-                <h3>Techsandhya 5.0</h3>
-                <a href="./techsandhya/Techsandhya(5.0).pdf"><button class="btn">View here</button></a>
+        </div>
+
+        <!-- Submit Tab Content -->
+        <div id="submit" class="tab-content">
+            <div class="card form-card">
+                <div class="card-header">
+                    <h2>Submit Your Article</h2>
+                    <p>Share your innovative ideas and research with the technical community</p>
+                </div>
+                <div class="card-body">
+                    <form onsubmit="event.preventDefault(); alert('Submission feature coming soon!');">
+                        <div class="form-grid">
+                            <div class="form-group">
+                                <label>Author Name</label>
+                                <input type="text" placeholder="Your full name" required>
+                            </div>
+                            <div class="form-group">
+                                <label>Email</label>
+                                <input type="email" placeholder="your@email.com" required>
+                            </div>
+                        </div>
+                        <div class="form-grid">
+                            <div class="form-group">
+                                <label>Institution</label>
+                                <input type="text" placeholder="Your college/institution" required>
+                            </div>
+                            <div class="form-group">
+                                <label>Category</label>
+                                <select required>
+                                    <option value="" disabled selected>Select article category</option>
+                                    <option value="research">Research Paper</option>
+                                    <option value="innovation">Innovation & Technology</option>
+                                    <option value="review">Literature Review</option>
+                                    <option value="case-study">Case Study</option>
+                                    <option value="technical">Technical Article</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label>Article Title</label>
+                            <input type="text" placeholder="Enter the title of your article" required>
+                        </div>
+                        <div class="form-group">
+                            <label>Abstract</label>
+                            <textarea rows="6"
+                                placeholder="Provide a detailed abstract of your article (minimum 200 words)"
+                                required></textarea>
+                        </div>
+                        <button type="submit" class="btn-primary full-width">Submit Article</button>
+                    </form>
+                </div>
             </div>
-            <div class="tech-box">
-                <img src="./images/techsandhya/4th.jpg" alt="1st techsandhya">
-                <h3>Techsandhya 4.0</h3>
-                <a href="./techsandhya/techsandhya(4.0).pdf"><button class="btn">View here</button></a>
+        </div>
+
+        <!-- Guidelines Tab Content -->
+        <div id="guidelines" class="tab-content">
+            <div class="card guidelines-card">
+                <div class="card-header">
+                    <h2>Submission Guidelines</h2>
+                </div>
+                <div class="card-body">
+                    <div class="guideline-section">
+                        <h3>Article Requirements</h3>
+                        <ul>
+                            <li>• Articles must be original and unpublished work</li>
+                            <li>• Minimum word count: 1500 words</li>
+                            <li>• Maximum word count: 5000 words</li>
+                            <li>• All references must be properly cited</li>
+                            <li>• Images and diagrams should be high resolution</li>
+                        </ul>
+                    </div>
+                    <div class="guideline-section">
+                        <h3>Formatting Guidelines</h3>
+                        <ul>
+                            <li>• Font: Times New Roman, 12pt</li>
+                            <li>• Line spacing: 1.5</li>
+                            <li>• Margins: 1 inch on all sides</li>
+                            <li>• Include author bio (100 words max)</li>
+                            <li>• Submit in .docx or .pdf format</li>
+                        </ul>
+                    </div>
+                </div>
             </div>
-            <div class="tech-box">
-                <img src="./images/techsandhya/3rd.jpg" alt="2nd techsandhya">
-                <h3>Techsandhya 3.0</h3>
-                <a href="./techsandhya/techsandhya(3.0).pdf"><button class="btn">View here</button></a>
-            </div>
-            <div class="tech-box">
-                <img src="./images/techsandhya/2nd.jpg" alt="1st techsandhya">
-                <h3>Techsandhya 2.0</h3>
-                <a href="./techsandhya/techsandhya(2.0).pdf"><button class="btn">View here</button></a>
-            </div>
-            <div class="tech-box">
-                <img src="./images/techsandhya/1st.jpg" alt="1st techsandhya">
-                <h3>Techsandhya 1.0</h3>
-                <a href="./techsandhya/techsandhya(1.0).pdf"><button class="btn">View here</button></a>
+
+            <div class="downloads-section">
+                <h2>Download Resources</h2>
+                <div class="downloads-grid">
+                    <!-- Techsandhya Archives -->
+                    <div class="download-card">
+                        <div class="icon-circle"><i class="fa-solid fa-file-pdf"></i></div>
+                        <div class="download-info">
+                            <h4>Techsandhya 8.0</h4>
+                            <p>Latest Edition</p>
+                        </div>
+                        <a href="./techsandhya/techsandhya(8.0).pdf" class="btn-small" download><i
+                                class="fa-solid fa-download"></i> Download</a>
+                    </div>
+
+                    <div class="download-card">
+                        <div class="icon-circle"><i class="fa-solid fa-file-pdf"></i></div>
+                        <div class="download-info">
+                            <h4>Techsandhya 7.0</h4>
+                            <p>Previous Edition</p>
+                        </div>
+                        <a href="./techsandhya/techsandhya(7.0).pdf" class="btn-small" download><i
+                                class="fa-solid fa-download"></i> Download</a>
+                    </div>
+
+                    <div class="download-card">
+                        <div class="icon-circle"><i class="fa-solid fa-file-pdf"></i></div>
+                        <div class="download-info">
+                            <h4>Techsandhya 5.0</h4>
+                            <p>Archive</p>
+                        </div>
+                        <a href="./techsandhya/Techsandhya(5.0).pdf" class="btn-small" download><i
+                                class="fa-solid fa-download"></i> Download</a>
+                    </div>
+
+                    <div class="download-card">
+                        <div class="icon-circle"><i class="fa-solid fa-file-pdf"></i></div>
+                        <div class="download-info">
+                            <h4>Techsandhya 4.0</h4>
+                            <p>Archive</p>
+                        </div>
+                        <a href="./techsandhya/techsandhya(4.0).pdf" class="btn-small" download><i
+                                class="fa-solid fa-download"></i> Download</a>
+                    </div>
+
+                    <div class="download-card">
+                        <div class="icon-circle"><i class="fa-solid fa-file-pdf"></i></div>
+                        <div class="download-info">
+                            <h4>Techsandhya 3.0</h4>
+                            <p>Archive</p>
+                        </div>
+                        <a href="./techsandhya/techsandhya(3.0).pdf" class="btn-small" download><i
+                                class="fa-solid fa-download"></i> Download</a>
+                    </div>
+
+                    <div class="download-card">
+                        <div class="icon-circle"><i class="fa-solid fa-file-pdf"></i></div>
+                        <div class="download-info">
+                            <h4>Techsandhya 2.0</h4>
+                            <p>Archive</p>
+                        </div>
+                        <a href="./techsandhya/techsandhya(2.0).pdf" class="btn-small" download><i
+                                class="fa-solid fa-download"></i> Download</a>
+                    </div>
+
+                    <div class="download-card">
+                        <div class="icon-circle"><i class="fa-solid fa-file-pdf"></i></div>
+                        <div class="download-info">
+                            <h4>Techsandhya 1.0</h4>
+                            <p>Archive</p>
+                        </div>
+                        <a href="./techsandhya/techsandhya(1.0).pdf" class="btn-small" download><i
+                                class="fa-solid fa-download"></i> Download</a>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
 
-    <footer class="hidden footer-css" id="footer">
+    <script>
+        function openTab(tabName) {
+            // Hide all tab content
+            var i, tabcontent, tablinks;
+            tabcontent = document.getElementsByClassName("tab-content");
+            for (i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].style.display = "none";
+                tabcontent[i].classList.remove("active");
+            }
+
+            // Remove active class from all tab buttons
+            tablinks = document.getElementsByClassName("tab-btn");
+            for (i = 0; i < tablinks.length; i++) {
+                tablinks[i].classList.remove("active");
+            }
+
+            // Show the current tab
+            document.getElementById(tabName).style.display = "block";
+            // Add active class to button that opened the tab
+            // This needs to be handled by finding the button with the matching onclick
+            // Or simpler to just pass 'this' into the function
+            // For now, simpler implementation:
+            var buttons = document.getElementsByClassName("tab-btn");
+            for (let btn of buttons) {
+                if (btn.getAttribute('onclick').includes(tabName)) {
+                    btn.classList.add("active");
+                }
+            }
+
+            // Wait for display:block to apply then add opacity/transform class for animation
+            setTimeout(() => {
+                document.getElementById(tabName).classList.add("active");
+            }, 10);
+        }
+
+        // Initialize default tab (About)
+        document.addEventListener('DOMContentLoaded', function () {
+            openTab('about');
+        });
+    </script>
+
+    <footer class="footer-css" id="footer">
         <div class="icons">
             <a href="https://github.com/themalnadtechnicalclub/ClubWebsite"><i class="fa-brands fa-github"></i></a>
             <a href="https://www.facebook.com/FoundationsMTC"><i class="fa-brands fa-facebook"></i></a>
             <a href="https://www.instagram.com/malnad_technical_club/?igshid=YmMyMTA2M2Y%3D"><i
                     class="fa-brands fa-instagram"></i></a>
-            <a href="https://twitter.com/MalnadTechClub/"><i
-                    class="fa-brands fa-twitter"></i></a>
-            <a href="https://www.linkedin.com/company/the-malnad-technical-club/"><i class="fa-brands fa-linkedin-in"></i></a>
+            <a href="https://twitter.com/MalnadTechClub/"><i class="fa-brands fa-twitter"></i></a>
+            <a href="https://www.linkedin.com/company/the-malnad-technical-club/"><i
+                    class="fa-brands fa-linkedin-in"></i></a>
         </div>
         <div class="footer-info">
             <div class="address">
@@ -119,7 +338,8 @@
                 <p><a href="tel:+919741375061"><i class="fa-solid fa-phone"></i> +91 9741375061</a></p>
             </div>
             <div class="gmail">
-                <p><a href="mailto: mce.techclub@gmail.com"><i class="fa-solid fa-envelope"></i> mce.techclub@gmail.com</a>
+                <p><a href="mailto: mce.techclub@gmail.com"><i class="fa-solid fa-envelope"></i>
+                        mce.techclub@gmail.com</a>
                 </p>
             </div>
             <div class="issue">

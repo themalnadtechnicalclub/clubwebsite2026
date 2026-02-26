@@ -1,16 +1,16 @@
-.layout{
+.layout {
     margin: 100px 10%;
     color: white;
     font-family: 'oxygen', sans-serif;
 }
 
-.layout h1{
+.layout h1 {
     color: aqua;
     font-size: 2.5rem;
     margin: 20px 0px 20px 0px;
 }
 
-.layout img{
+.layout img {
     width: 400px;
     height: 300px;
     position: relative;
@@ -20,18 +20,18 @@
 
 }
 
-.layout p{
+.layout p {
     font-size: 20px;
     margin: 20px 20px 20px 0px;
 }
 
-.layout h3{
+.layout h3 {
     margin: 30px 0px;
     color: aqua;
     font-size: 2rem;
 }
 
-.layout iframe{
+.layout iframe {
     width: 450px;
     height: 350px;
     position: relative;
@@ -39,12 +39,13 @@
     transform: translateX(-50%);
 }
 
-@media(max-width: 770px){
-    .layout iframe{
+@media(max-width: 770px) {
+    .layout iframe {
         width: 300px;
         height: 200px;
     }
-    .layout img{
+
+    .layout img {
         width: 300px;
         height: 200px;
         transform: translateX(-60%);

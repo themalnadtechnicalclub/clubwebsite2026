@@ -5,37 +5,28 @@
 }
 
 .head {
-    margin: 110px 20px 20px 20px;
+    margin: 110px 20px 40px 20px;
+    text-align: center;
 }
 
 .head h1 {
     color: aqua;
     font-size: 3rem;
-    width: 100%;
-    margin: 0px 20px 0px 20px;
+    margin-bottom: 15px;
+    font-family: 'Dosis', sans-serif;
+    letter-spacing: 2px;
 }
 
-hr{
+hr {
+    border: none;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, aqua, transparent);
     margin-top: 10px;
+    width: 60%;
+    margin-left: auto;
+    margin-right: auto;
 }
-.club-conveners .allign{
-    justify-content: left;
-}
-@media (max-width: 770px) {
-    .club-conveners .allign{
-        justify-content: center;
-    }
-    .head {
-        margin: 60px 20px 20px 20px;
-    }
-    .team {
-       text-align: center;
-    }
-    .head h1 {
-        text-align: center;
-        margin: 0px 0px;
-    }
-}
+
 .members {
     margin: 20px;
 }
@@ -43,83 +34,182 @@ hr{
 .members h1 {
     color: aqua;
     font-size: 2.5rem;
-    margin: 50px 20px 50px 20px;
-}
-
-.team-card,
-.team-card-1 {
+    margin: 60px 20px 40px 20px;
+    text-align: center;
+    font-family: 'Dosis', sans-serif;
     position: relative;
-    width: 200px;
-    height: 315px;
-    border: 1px white solid;
-    border-radius: 10px;
-    font-family: 'oxygen', sans-serif;
-}
-.committee-heads .team-card-1{
-    height: 260px;
-}
-.team-card img,
-.team-card-1 img {
-    object-fit: cover;
-    width: 100px;
-    height: 150px;
-    border-radius: 10px;
-    position: absolute;
-    top: 10px;
+    display: inline-block;
     left: 50%;
     transform: translateX(-50%);
 }
 
-.team-card h2,
-.team-card-1 h2 {
-    position: relative;
-    top: 170px;
-    text-align: center;
+.members h1::after {
+    content: '';
+    display: block;
+    width: 50%;
+    height: 3px;
+    background: aqua;
+    margin: 10px auto 0;
+    border-radius: 2px;
 }
 
-.qualification {
-    position: relative;
-    text-align: center;
-    top: 175px;
-    font-weight: bold;
-}
-
+/* Grid Layout */
 .allign {
-    margin: 20px;
-    display: grid;
-    gap: 20px 40px;
+    margin: 20px auto;
+    display: flex;
+    flex-wrap: wrap;
     justify-content: center;
-
+    gap: 30px;
+    max-width: 1400px;
 }
 
-.team-card-1 p {
+/* Card Design */
+.team-card,
+.team-card-1,
+.team-card-2 {
     position: relative;
+    width: 260px;
+    height: auto;
+    min-height: 320px;
+    background: rgba(255, 255, 255, 0.05);
+    /* Glassmorphism base */
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    font-family: 'Oxygen', sans-serif;
+    padding: 30px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+.team-card:hover,
+.team-card-1:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+    border-color: rgba(0, 255, 255, 0.3);
+}
+
+.team-card-2:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+}
+
+/* Shine effect on hover */
+.team-card::before,
+.team-card-1::before,
+.team-card-2::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+    transition: 0.5s;
+}
+
+.team-card:hover::before,
+.team-card-1:hover::before,
+.team-card-2:hover::before {
+    left: 100%;
+}
+
+/* Images */
+.team-card img,
+.team-card-1 img {
+    object-fit: cover;
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+    border: 3px solid rgba(0, 255, 255, 0.5);
+    margin-bottom: 20px;
+    transition: border-color 0.3s ease, transform 0.3s ease;
+}
+
+.team-card-2 img {
+    object-fit: cover;
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+    margin-bottom: 20px;
+    transition: border-color 0.3s ease, transform 0.3s ease;
+}
+
+.team-card:hover img,
+.team-card-1:hover img {
+    border-color: aqua;
+    transform: scale(1.05);
+}
+
+/* Text Styling */
+.team-card h2,
+.team-card-1 h2,
+.team-card-2 h2 {
+    font-size: 1.4rem;
+    color: white;
+    margin-bottom: 10px;
     text-align: center;
-    top: 175px;
-    font-weight: bold;
+    font-weight: 600;
 }
 
-.committee-members .team-card-1 {
-    position: relative;
-    width: 200px;
-    height: 265px;
-    border: 1px white solid;
-    border-radius: 10px;
-    font-family: 'oxygen', sans-serif;
+.qualification,
+.team-card-1 p,
+.team-card-2 p {
+    font-size: 0.95rem;
+    color: #ddd;
+    text-align: center;
+    line-height: 1.4;
+    margin-top: auto;
 }
 
-.second-years .team-card-1 {
-    position: relative;
-    width: 200px;
-    height: 240px;
-    border: 1px white solid;
-    border-radius: 10px;
-    font-family: 'oxygen', sans-serif;
+.qualification p {
+    margin: 0;
 }
 
-@media (min-width: 770px) {
+/* Specific Adjustments */
+.second-years .team-card-1,
+.team-card-2 {
+    min-height: 240px;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 770px) {
+    .head {
+        margin: 80px 20px 20px 20px;
+    }
+
+    .head h1 {
+        font-size: 2.2rem;
+    }
+
+    .members h1 {
+        font-size: 1.8rem;
+        margin: 40px 20px;
+    }
+
+    .team-card,
+    .team-card-2,
+    .team-card-1 {
+        width: 100%;
+        max-width: 300px;
+    }
+}
+
+@media (max-width: 480px) {
     .allign {
-        justify-content: left;
-        grid-template-columns: repeat(5, 0fr);
+        gap: 20px;
+    }
+
+    .team-card,
+    .team-card-2,
+    .team-card-1 {
+        width: 100%;
+        max-width: 280px;
+        padding: 20px 15px;
     }
 }
