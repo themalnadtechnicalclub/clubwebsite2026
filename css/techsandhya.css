@@ -2,29 +2,31 @@
 @import url('https://fonts.googleapis.com/css2?family=Oxygen:wght@300;400;700&family=Dosis:wght@400;500;700&display=swap');
 
 :root {
-    --beige-50: #fdfbf7;
-    --beige-100: #f7f3e8;
-    --beige-200: #efe5d0;
-    --beige-600: #a18e6e;
-    --beige-700: #857152;
-    --text-primary: #4a4a4a;
-    --text-secondary: #6e6e6e;
+    --dark-bg: #080808;
+    --dark-card: #141414;
+    --dark-card-hover: #1e1e1e;
+    --dark-border: rgba(255, 255, 255, 0.08);
+    --accent: aqua;
+    --accent-dim: rgba(0, 255, 255, 0.15);
+    --accent-glow: rgba(0, 255, 255, 0.3);
+    --text-primary: #ffffff;
+    --text-secondary: #aaaaaa;
+    --tab-active-bg: aqua;
+    --tab-active-color: #080808;
 }
 
 body {
-    background-color: var(--beige-50);
+    background-color: var(--dark-bg);
     color: var(--text-primary);
     font-family: 'Oxygen', sans-serif;
 }
 
-/* Header Section */
+/* ── Header Section ── */
 .header-section {
     text-align: center;
-    padding: 120px 20px 40px;
-    background: linear-gradient(180deg, #111 0%, #1a1a1a 40%, var(--beige-50) 100%);
-    /* Blend from dark nav to beige */
-    color: white;
-    /* Start white for contrast against dark top */
+    padding: 130px 20px 50px;
+    background: linear-gradient(180deg, #000 0%, #0a0a0a 60%, var(--dark-bg) 100%);
+    color: var(--text-primary);
 }
 
 .header-section h1 {
@@ -32,29 +34,28 @@ body {
     font-size: 3.5rem;
     letter-spacing: 3px;
     margin-bottom: 20px;
-    color: aqua;
-    /* Keep club branding */
-    text-shadow: 0 0 10px rgba(0, 255, 255, 0.3);
+    color: var(--accent);
+    text-shadow: 0 0 15px var(--accent-glow);
 }
 
 .line-divider {
     width: 100px;
-    height: 4px;
-    background: var(--beige-600);
+    height: 3px;
+    background: var(--accent);
     margin: 0 auto 20px;
     border-radius: 2px;
+    box-shadow: 0 0 8px var(--accent-glow);
 }
 
 .subtitle {
     font-size: 1.1rem;
     max-width: 700px;
     margin: 0 auto;
-    line-height: 1.6;
-    color: #ddd;
-    /* Light text for readability on dark gradient */
+    line-height: 1.7;
+    color: var(--text-secondary);
 }
 
-/* Tabs Navigation */
+/* ── Tabs Navigation ── */
 .tabs-container {
     display: flex;
     justify-content: center;
@@ -62,12 +63,12 @@ body {
 }
 
 .tabs {
-    background: var(--beige-100);
+    background: var(--dark-card);
     padding: 8px;
     border-radius: 50px;
     display: flex;
     gap: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+    border: 1px solid var(--dark-border);
 }
 
 .tab-btn {
@@ -79,22 +80,22 @@ body {
     font-family: 'Oxygen', sans-serif;
     font-weight: 600;
     font-size: 1rem;
-    color: var(--beige-700);
+    color: var(--text-secondary);
     transition: all 0.3s ease;
 }
 
 .tab-btn:hover {
-    background: var(--beige-200);
+    background: rgba(255, 255, 255, 0.06);
+    color: var(--text-primary);
 }
 
 .tab-btn.active {
-    background: var(--beige-600);
-    color: white;
-    box-shadow: 0 4px 10px rgba(161, 142, 110, 0.4);
+    background: var(--accent);
+    color: var(--dark-bg);
+    box-shadow: 0 4px 15px var(--accent-glow);
 }
 
-/* Tab Content Animation */
-/* Tab Content Animation */
+/* ── Tab Content Animation ── */
 @keyframes fadeIn {
     from {
         opacity: 0;
@@ -120,7 +121,7 @@ body {
     animation: fadeIn 0.5s ease forwards;
 }
 
-/* About Section */
+/* ── About Section ── */
 .about-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -131,8 +132,9 @@ body {
 .about-text h2 {
     font-family: 'Dosis', sans-serif;
     font-size: 2.5rem;
-    color: var(--beige-700);
+    color: var(--accent);
     margin-bottom: 20px;
+    text-shadow: 0 0 10px var(--accent-glow);
 }
 
 .about-text p {
@@ -156,9 +158,10 @@ body {
 }
 
 .icon-circle {
-    width: 40px;
-    height: 40px;
-    background: var(--beige-200);
+    width: 44px;
+    height: 44px;
+    background: var(--accent-dim);
+    border: 1px solid var(--accent);
     border-radius: 50%;
     display: flex;
     justify-content: center;
@@ -167,26 +170,28 @@ body {
 }
 
 .icon-circle i {
-    color: var(--beige-600);
-    font-size: 1.2rem;
+    color: var(--accent);
+    font-size: 1.1rem;
 }
 
 .feature-item h4 {
     font-size: 1.1rem;
-    color: var(--beige-700);
+    color: var(--text-primary);
     margin: 0 0 5px;
 }
 
 .feature-item p {
     font-size: 0.95rem;
     margin: 0;
+    color: var(--text-secondary);
 }
 
 .about-image {
     position: relative;
     border-radius: 20px;
     overflow: hidden;
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.6), 0 0 30px var(--accent-glow);
+    border: 1px solid var(--dark-border);
 }
 
 .about-image img {
@@ -200,74 +205,84 @@ body {
     transform: scale(1.03);
 }
 
-/* Buttons */
+/* ── Buttons ── */
 .action-buttons {
     display: flex;
     gap: 15px;
+    flex-wrap: wrap;
 }
 
 .btn-primary {
-    background: var(--beige-600);
-    color: white;
+    background: var(--accent);
+    color: var(--dark-bg);
     padding: 15px 35px;
     border: none;
     border-radius: 12px;
     font-size: 1rem;
-    font-weight: 600;
+    font-weight: 700;
     cursor: pointer;
     transition: all 0.3s ease;
+    font-family: 'Oxygen', sans-serif;
 }
 
 .btn-primary:hover {
-    background: var(--beige-700);
+    background: #00cccc;
     transform: translateY(-2px);
-    box-shadow: 0 10px 20px rgba(161, 142, 110, 0.3);
+    box-shadow: 0 10px 25px var(--accent-glow);
 }
 
 .btn-outline {
     background: transparent;
-    color: var(--beige-600);
-    border: 2px solid var(--beige-600);
+    color: var(--accent);
+    border: 2px solid var(--accent);
     padding: 15px 35px;
     border-radius: 12px;
     font-size: 1rem;
-    font-weight: 600;
+    font-weight: 700;
     cursor: pointer;
     transition: all 0.3s ease;
+    font-family: 'Oxygen', sans-serif;
 }
 
 .btn-outline:hover {
-    background: var(--beige-600);
-    color: white;
+    background: var(--accent);
+    color: var(--dark-bg);
+    box-shadow: 0 10px 25px var(--accent-glow);
 }
 
-/* Cards (Form/Guidelines) */
+/* ── Cards (Form / Guidelines) ── */
 .card {
-    background: white;
+    background: var(--dark-card);
     border-radius: 20px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.4);
     overflow: hidden;
     max-width: 900px;
     margin: 0 auto;
-    border: 1px solid var(--beige-100);
+    border: 1px solid var(--dark-border);
 }
 
 .card-header {
     padding: 40px 40px 20px;
     text-align: center;
+    border-bottom: 1px solid var(--dark-border);
 }
 
 .card-header h2 {
-    color: var(--beige-700);
+    color: var(--accent);
     font-size: 2rem;
     margin-bottom: 10px;
+    text-shadow: 0 0 10px var(--accent-glow);
+}
+
+.card-header p {
+    color: var(--text-secondary);
 }
 
 .card-body {
-    padding: 20px 40px 50px;
+    padding: 30px 40px 50px;
 }
 
-/* Form Styles */
+/* ── Form Styles ── */
 .form-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -291,36 +306,48 @@ body {
 input,
 select,
 textarea {
-    padding: 15px;
-    border: 1px solid #e0e0e0;
+    padding: 14px 16px;
+    border: 1px solid var(--dark-border);
     border-radius: 10px;
     font-family: 'Oxygen', sans-serif;
     font-size: 1rem;
-    transition: border-color 0.3s ease;
+    background: #1a1a1a;
+    color: var(--text-primary);
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+input::placeholder,
+textarea::placeholder {
+    color: #555;
+}
+
+select option {
+    background: #1a1a1a;
+    color: var(--text-primary);
 }
 
 input:focus,
 select:focus,
 textarea:focus {
     outline: none;
-    border-color: var(--beige-600);
-    box-shadow: 0 0 0 3px rgba(161, 142, 110, 0.1);
+    border-color: var(--accent);
+    box-shadow: 0 0 0 3px var(--accent-dim);
 }
 
 .full-width {
     width: 100%;
 }
 
-/* Guidelines Styles */
+/* ── Guidelines Styles ── */
 .guideline-section {
     margin-bottom: 40px;
 }
 
 .guideline-section h3 {
-    color: var(--beige-700);
+    color: var(--accent);
     font-size: 1.4rem;
     margin-bottom: 15px;
-    border-bottom: 2px solid var(--beige-100);
+    border-bottom: 1px solid var(--dark-border);
     padding-bottom: 10px;
 }
 
@@ -333,9 +360,10 @@ textarea:focus {
     padding: 8px 0;
     color: var(--text-secondary);
     font-size: 1.05rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.03);
 }
 
-/* Downloads Grid */
+/* ── Downloads Grid ── */
 .downloads-section {
     max-width: 900px;
     margin: 60px auto 0;
@@ -343,31 +371,33 @@ textarea:focus {
 
 .downloads-section h2 {
     text-align: center;
-    color: var(--beige-700);
+    color: var(--accent);
     margin-bottom: 40px;
+    text-shadow: 0 0 10px var(--accent-glow);
 }
 
 .downloads-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
     gap: 20px;
 }
 
 .download-card {
-    background: white;
+    background: var(--dark-card);
     padding: 20px;
     border-radius: 15px;
     display: flex;
     align-items: center;
     gap: 15px;
-    border: 1px solid var(--beige-100);
+    border: 1px solid var(--dark-border);
     transition: all 0.3s ease;
 }
 
 .download-card:hover {
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
-    transform: translateY(-2px);
-    border-color: var(--beige-200);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4), 0 0 15px var(--accent-glow);
+    border-color: var(--accent);
+    transform: translateY(-3px);
+    background: var(--dark-card-hover);
 }
 
 .download-info {
@@ -376,32 +406,36 @@ textarea:focus {
 
 .download-info h4 {
     margin: 0;
-    color: var(--beige-700);
+    color: var(--text-primary);
+    font-size: 1rem;
 }
 
 .download-info p {
-    margin: 5px 0 0;
+    margin: 4px 0 0;
     font-size: 0.85rem;
-    color: #999;
+    color: #666;
 }
 
 .btn-small {
     font-size: 0.85rem;
     padding: 8px 15px;
-    background: var(--beige-100);
-    color: var(--beige-700);
+    background: var(--accent-dim);
+    color: var(--accent);
     text-decoration: none;
     border-radius: 8px;
     font-weight: 600;
+    border: 1px solid var(--accent);
     transition: all 0.2s;
+    white-space: nowrap;
 }
 
 .btn-small:hover {
-    background: var(--beige-600);
-    color: white;
+    background: var(--accent);
+    color: var(--dark-bg);
+    box-shadow: 0 4px 15px var(--accent-glow);
 }
 
-/* Responsive */
+/* ── Responsive ── */
 @media (max-width: 768px) {
 
     .about-grid,
@@ -414,12 +448,16 @@ textarea:focus {
     }
 
     .tab-btn {
-        padding: 10px 20px;
+        padding: 10px 18px;
         font-size: 0.9rem;
     }
 
     .card-body,
     .card-header {
         padding: 20px;
+    }
+
+    .action-buttons {
+        flex-direction: column;
     }
 }
