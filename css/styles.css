@@ -861,3 +861,61 @@ hr {
     transform: translate(-50%, -25%) scale(1.2);
   }
 }
+
+/* ── Global Mobile Responsive ── */
+@media (max-width: 768px) {
+
+  /* Footer — stack vertically */
+  footer {
+    flex-direction: column !important;
+    align-items: center;
+    text-align: center;
+    padding: 20px 16px 60px;
+    gap: 0;
+  }
+
+  .icons,
+  .footer-info {
+    height: auto !important;
+    margin-bottom: 0 !important;
+    width: 100%;
+  }
+
+  .icons {
+    flex-direction: row !important;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 10px 0 !important;
+  }
+
+  .icons i {
+    margin: 0 10px 10px !important;
+    font-size: 1.3rem;
+  }
+
+  .footer-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 6px;
+  }
+
+  .address,
+  .phone-no,
+  .gmail,
+  .issue {
+    margin: 6px 0 !important;
+    text-align: center;
+  }
+
+  .copyright {
+    font-size: 0.8rem;
+    padding: 0 10px;
+  }
+
+  /* Nav — hamburger menu already handled by styles.css;
+     make sure hidden items collapse */
+  .nav-links {
+    width: 100%;
+  }
+}
