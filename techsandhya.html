@@ -106,13 +106,15 @@
 
                     <div class="action-buttons">
                         <button class="btn-primary" onclick="openTab('submit')">Submit Article</button>
-                        <button class="btn-outline" onclick="openTab('guidelines')">Download Guidelines</button>
+                        <button class="btn-outline" onclick="openTab('guidelines')">Guidelines</button>
                     </div>
                 </div>
                 <!-- Check if we have a suitable image, otherwise use a placeholder or one of the event images -->
-                <div class="about-image">
+                <div class="about-image" onclick="openTab('archives')" title="View all editions"
+                    style="cursor:pointer;">
                     <img src="./images/techsandhya/8th.png" alt="Techsandhya Cover">
                     <div class="image-overlay"></div>
+                    <div class="cover-click-hint"><i class="fa-solid fa-layer-group"></i> View Archives</div>
                 </div>
             </div>
         </div>

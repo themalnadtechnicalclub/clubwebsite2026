@@ -211,6 +211,29 @@ body {
     transform: scale(1.03);
 }
 
+.cover-click-hint {
+    position: absolute;
+    bottom: 14px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(0, 255, 255, 0.15);
+    border: 1px solid var(--accent);
+    color: var(--accent);
+    font-size: 0.8rem;
+    font-weight: 700;
+    padding: 6px 16px;
+    border-radius: 20px;
+    letter-spacing: 1px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    white-space: nowrap;
+    pointer-events: none;
+}
+
+.about-image:hover .cover-click-hint {
+    opacity: 1;
+}
+
 /* ── Buttons ── */
 .action-buttons {
     display: flex;
