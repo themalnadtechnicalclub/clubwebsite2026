@@ -1,12 +1,9 @@
 /* Import Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Oxygen:wght@300;400;700&family=Dosis:wght@400;500;700&display=swap');
 
-/* Override global fixed copyright so it doesn't float over content */
-.copyright {
-    position: static !important;
-    text-align: center;
-    padding: 10px 0 6px;
-    width: 100%;
+/* Give footer enough bottom space so the fixed copyright bar doesn't overlap */
+.footer-css {
+    padding-bottom: 50px;
 }
 
 
