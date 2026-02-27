@@ -52,8 +52,16 @@
 }
 
 @media(max-width: 770px) {
+    .project-heading {
+        position: relative;
+    }
+
     .project-heading img {
-        object-fit: cover;
+        object-fit: contain;
+        object-position: center;
+        background-color: #080808;
+        height: 100dvh;
+        width: 100%;
     }
 
     .project-heading h1 {
@@ -62,7 +70,6 @@
         transform: translate(-50%, -13%);
         font-size: 2rem;
     }
-
 
     .project-heading i {
         left: 50%;
