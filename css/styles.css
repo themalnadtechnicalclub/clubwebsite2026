@@ -46,13 +46,14 @@
 
 body {
   margin: 0;
-  padding: 0;
+  padding: 1px 0 0 0;
   background-color: rgb(8, 8, 8);
   font-family: 'ag-light', sans-serif;
   -ms-overflow-style: none;
   scrollbar-width: none;
   scroll-snap-type: y mandatory;
   overflow-y: scroll;
+  overflow-x: hidden;
 }
 
 body::-webkit-scrollbar {
@@ -91,11 +92,10 @@ body::-webkit-scrollbar {
 }
 
 .drop-down {
-  position: absolute;
-  right: 10%;
-  top: 7%;
-  /* position: fixed; */
-  z-index: 10;
+  position: fixed;
+  right: 5%;
+  top: 30px;
+  z-index: 1000;
 }
 
 .drop-down i {
@@ -179,10 +179,10 @@ body::-webkit-scrollbar {
   }
 
   .drop-down {
-    /* position: fixed; */
-    right: 10%;
-    top: 5%;
-    z-index: 10;
+    position: fixed;
+    right: 5%;
+    top: 20px;
+    z-index: 1000;
   }
 
   .menu-screen p {
@@ -196,10 +196,10 @@ body::-webkit-scrollbar {
 
 @media(max-width: 770px) {
   .drop-down {
-    /* position: fixed; */
-    right: 10%;
-    top: 4%;
-    z-index: 10;
+    position: fixed;
+    right: 5%;
+    top: 25px;
+    z-index: 1000;
   }
 
   .hero-section p {
@@ -470,7 +470,7 @@ video {
   }
 
   100% {
-    transform: translateX(calc(-250px * 7));
+    transform: translateX(calc(-430px * 13));
   }
 }
 
@@ -509,9 +509,9 @@ video {
 }
 
 .slider .slide-track {
-  animation: scroll 20s linear infinite;
+  animation: scroll 40s linear infinite;
   display: flex;
-  width: calc(250px * 14);
+  width: calc(430px * 26);
 }
 
 .slide img {
@@ -621,6 +621,8 @@ footer {
   justify-content: center;
   flex-direction: row;
   gap: 20px;
+  position: relative;
+  padding-bottom: 60px;
 }
 
 footer a {
@@ -675,11 +677,11 @@ footer p {
 
 .copyright {
   text-align: center;
-  margin-top: 10px;
-  bottom: 10px;
   display: flex;
   justify-content: center;
-  position: fixed;
+  position: absolute;
+  bottom: 10px;
+  left: 0;
   width: 100%;
 }
 
